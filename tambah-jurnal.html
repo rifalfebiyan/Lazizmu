@@ -274,7 +274,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="dashboard.html">
+        <a class="nav-link " href="dashboard.html">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -304,7 +304,7 @@
       </li>
       <!-- Jurnal -->
       <li class="nav-item">
-        <a class="nav-link " href="jurnal.html">
+        <a class="nav-link collapsed" href="jurnal.html">
           <i class="ri-book-read-line"></i>
           <span>Jurnal</span>
         </a>
@@ -371,103 +371,108 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Jurnal</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
-          <li class="breadcrumb-item active">Jurnal</li>
-        </ol>
-      </nav>
-    </div>
-    <section class="section dashboard">
+        <h1>Tambah Jurnal</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="jurnal.html">Jurnal</a></li>
+            <li class="breadcrumb-item active">Tambah Jurnal</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
+      <section class="section">
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-lg-15">
+  
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Data Jurnal Lazizmu</h5>
-                <a href="tambah-jurnal.html"><button type="submit" class="btn btn-primary">+ Tambah Jurnal</button></a>
-                <div class="table-responsive">
-                  <table class="table table-bordered table-hover datatable">
-                    <thead>
-                      <tr>
-                        <th scope="col" class="text-center">No</th>
-                        <th scope="col" >Judul</th>
-                        <th scope="col" class="text-center">Penulis</th>
-                        <th scope="col" class="text-center">Tahun</th>
-                        <th scope="col" class="text-center">Aksi</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row" class="text-center">1</th>
-                        <td>Jurnal Zakat dan Infaq di Indonesia</td>
-                        <td class="text-center">Abdullah Malik</td>
-                        <td class="text-center">2023</td>
-                        <td class="text-center">
-                          <div class="btn-group" role="group">
-                            <a href="hapusdata.php" class="btn btn-danger">Hapus</a>
-                            <a href="updatedata.html" class="btn btn-warning">Update</a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-center">2</th>
-                        <td>Optimalisasi Pengelolaan Dana ZIS</td>
-                        <td class="text-center">Aisyah Amira</td>
-                        <td class="text-center">2022</td>
-                        <td class="text-center">
-                          <div class="btn-group" role="group">
-                            <a href="hapusdata.php" class="btn btn-danger">Hapus</a>
-                            <a href="updatedata.html" class="btn btn-warning">Update</a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-center">3</th>
-                        <td>Studi Efektivitas Program Zakat di Yogyakarta</td>
-                        <td class="text-center">Farid Maulana</td>
-                        <td class="text-center">2021</td>
-                        <td class="text-center">
-                          <div class="btn-group" role="group">
-                            <a href="hapusdata.php" class="btn btn-danger">Hapus</a>
-                            <a href="updatedata.html" class="btn btn-warning">Update</a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-center">2</th>
-                        <td>Optimalisasi Pengelolaan Dana ZIS</td>
-                        <td class="text-center">Aisyah Amira</td>
-                        <td class="text-center">2022</td>
-                        <td class="text-center">
-                          <div class="btn-group" role="group">
-                            <a href="hapusdata.php" class="btn btn-danger">Hapus</a>
-                            <a href="updatedata.html" class="btn btn-warning">Update</a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-center">2</th>
-                        <td>Optimalisasi Pengelolaan Dana ZIS</td>
-                        <td class="text-center">Aisyah Amira</td>
-                        <td class="text-center">2022</td>
-                        <td class="text-center">
-                          <div class="btn-group" role="group">
-                            <a href="hapusdata.php" class="btn btn-danger">Hapus</a>
-                            <a href="updatedata.html" class="btn btn-warning">Update</a>
-                          </div>
-                        </td>
-                      </tr>
-                      <!-- Add more rows as needed -->
-                    </tbody>
-                  </table>
-                </div>
+                <h5 class="card-title">Tambah Data Jurnal</h5>
+  
+                <!-- Horizontal Form -->
+                <section class="section dashboard">
+                  <form method="post" action="">
+                      <div class="row mb-3">
+                        <label for="tanggal" class="col-sm-2 col-form-label">Tanggal:</label>
+                        <div class="col-sm-10">
+                          <input type="date" class="form-control" id="tanggal" name="tanggal" required>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="kode_jurnal" class="col-sm-2 col-form-label">Kode Jurnal:</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="kode_jurnal" name="kode_jurnal" required>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="kode_akun" class="col-sm-2 col-form-label">Kode Akun:</label>
+                        <div class="col-sm-10">
+                          <select class="form-control" id="kode_akun" name="kode_akun" required>
+                              <option selected>Pilih Kode Akun</option>
+                              <option value="1">100001</option>
+                              <option value="2">100002</option>
+                              <option value="3">100003</option>
+                              <option value="4">100004</option>
+                            <!-- options will be populated here -->
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="nama_akun" class="col-sm-2 col-form-label">Nama Akun:</label>
+                        <div class="col-sm-10">
+                          <select class="form-control" id="nama_akun" name="nama_akun" required>
+                            <!-- options will be populated here -->
+                            <option selected>Pilih Nama Akun</option>
+                            <option value="kas">Kas</option>
+                            <option value="kasbank">Kas Bank</option>
+                            <option value="investasi">Investasi</option>
+                            <option value="piutang">Piutang</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="arus_kas" class="col-sm-2 col-form-label">Arus Kas:</label>
+                        <div class="col-sm-10">
+                          <select class="form-control" id="arus_kas" name="arus_kas" required>
+                              <option selected>Pilih Arus Kas</option>
+                              <option value="Operasi"> Operasi</option>
+                              <option value="Masuk"> Kas Masuk</option>
+                              <option value="Keluar">Kas Keluar</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="debit" class="col-sm-2 col-form-label">Debet:</label>
+                        <div class="col-sm-10">
+                          <input type="number" class="form-control" id="debit" name="debit" required>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="kredit" class="col-sm-2 col-form-label">Kredit:</label>
+                        <div class="col-sm-10">
+                          <input type="number" class="form-control" id="kredit" name="kredit" required>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="keterangan" class="col-sm-2 col-form-label">Keterangan:</label>
+                        <div class="col-sm-10">
+                          <textarea class="form-control" id="keterangan" name="keterangan" rows="4" cols="50"></textarea>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                          <button type="reset" class="btn btn-secondary">Reset</button>
+                      </div>
+                    </form>
+  
               </div>
             </div>
-          </div><!-- End Data Table -->
+              </div>
+            </div>
+  
+          </div>
         </div>
       </section>
-      
+  
       
 
 
