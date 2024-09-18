@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>HALAMAN LOGIN</title>
+  <title>Halaman Register</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -44,7 +44,6 @@
               <div class="d-flex justify-content-center py-4">
                 <a href="index.html" class="logo d-flex align-items-center w-auto">
                   <img src="assets/img/lazizmu_logo.png" alt="">
-                  <!-- <span class="d-none d-lg-block">LAZIZMU</span> -->
                 </a>
               </div>
               <!-- End Logo -->
@@ -54,40 +53,47 @@
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <!-- <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
-                    <p class="text-center small">Enter your username & password to login</p> -->
-                    <h5 class="card-title text-center pb-0 fs-4" style="color: #000000">Login</h5>
-                    <p class="text-center small" style="color: #000000">Masukkan Username & Password untuk Login</p>
+                    <h5 class="card-title text-center pb-0 fs-4">Registrasi</h5>
+                    <p class="text-center small">Masukkan Data Diri Untuk Membuat Akun</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
-
+                  <form class="row g-3 needs-validation" id="registerForm" novalidate>
+                   
                     <div class="col-12">
-                      <label for="yourUsername" class="form-label">Username</label>
-                      <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="username" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Please enter your username.</div>
-                      </div>
+                      <label for="yourEmail" class="form-label">Email</label>
+                      <input type="email" name="email" class="form-control" id="yourEmail" required>
+                      <div class="invalid-feedback">Mohon, Masukkan Alamat Email Anda!</div>
+                    </div>
+                    <div class="col-12">
+                      <label for="yourName" class="form-label">Nama</label>
+                      <input type="text" name="name" class="form-control" id="yourName" required>
+                      <div class="invalid-feedback">Mohon, Masukkan Nama Anda!</div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Password</label>
                       <input type="password" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Please enter your password!</div>
+                      <div class="invalid-feedback">Mohon Masukkan Kata Sandi!</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="confirmPassword" class="form-label">Konfirmasi Password</label>
+                      <input type="password" name="password" class="form-control" id="confirmyourPassword" required>
+                      <div class="invalid-feedback">Mohon Masukkan Kata Sandi!</div>
                     </div>
 
                     <div class="col-12">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
-                        <label class="form-check-label" for="rememberMe">Ingat saya</label>
+                        <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
+                        <label class="form-check-label" for="acceptTerms">Saya Setuju <a href="#">Syarat dan Ketentuan</a></label>
+                        <div class="invalid-feedback">Kamu Harus Menyetujui Sebelum Kirim.</div>
                       </div>
                     </div>
                     <div class="col-12">
-                      <button class="btn w-100" type="submit" style="background-color: #f3a81c; border-color: #f3a81c" onclick="login(event)">Login</button>
+                      <button class="btn w-100" style="background-color: #f3a81c; border-color: #f3a81c" type="submit">Buat Akun</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Belum punya akun? <a href="register.html">Daftar segera!</a></p>
+                      <p class="small mb-0">Sudah Memiliki Akun? <a href="index.html">Log in</a></p>
                     </div>
                   </form>
 
@@ -95,7 +101,6 @@
               </div>
 
               <div class="credits">
-            <!-- CRETDIT -->
               </div>
 
             </div>
@@ -106,24 +111,6 @@
 
     </div>
   </main><!-- End #main -->
-  <script>
-   function login(event) {
-  event.preventDefault(); // Mencegah form dari pengiriman default
-
-  // Ambil nilai input
-  const username = document.getElementById('yourUsername').value;
-  const password = document.getElementById('yourPassword').value;
-
-  // Validasi sederhana: cek apakah username dan password diisi
-  if (username === 'rifal' && password === 'rifal') {
-    // Redirect ke halaman dashboard
-    window.location.href = 'dashboard.html';
-  } else {
-    alert('Username atau password salah!');
-  }
-}
-
-  </script>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -139,6 +126,25 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Custom JS for form validation, pop-up, and redirection -->
+  <script>
+    // Validasi form dan redirect ke dashboard setelah berhasil
+    document.getElementById('registerForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Mencegah form dikirim secara otomatis
+
+      // Cek apakah form valid
+      if (this.checkValidity()) {
+        // Tampilkan pop-up notifikasi
+        alert('Akun berhasil didaftarkan!');
+        // Redirect ke halaman dashboard
+        window.location.href = "dashboard.html";
+      } else {
+        // Jika form tidak valid, jalankan validasi HTML5
+        this.classList.add('was-validated');
+      }
+    });
+  </script>
 
 </body>
 
