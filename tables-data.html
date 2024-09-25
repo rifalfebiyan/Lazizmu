@@ -274,7 +274,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link  collapsed" href="dashboard.html">
+        <a class="nav-link " href="dashboard.html">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -293,27 +293,6 @@
         <a class="nav-link collapsed" href="#">
           <i class="bi bi-emoji-heart-eyes"></i>
           <span>Qurban Saya</span>
-        </a>
-      </li>
-      <!-- Akun -->
-      <li class="nav-item">
-        <a class="nav-link" href="Akun.html">
-          <i class="ri-book-read-line"></i>
-          <span>Akun</span>
-        </a>
-      </li>
-      <!-- Saldo Awal -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="saldo-akun.html">
-          <i class="ri-book-read-line"></i>
-          <span>Saldo Awal</span>
-        </a>
-      </li>
-      <!-- Jurnal -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="jurnal.html">
-          <i class="ri-book-read-line"></i>
-          <span>Jurnal</span>
         </a>
       </li>
       <!-- Profile -->
@@ -337,15 +316,30 @@
           <i class="bi bi-envelope"></i>
           <span>Contact</span>
         </a>
-      </li>
-      <!-- End Contact Page Nav -->
+      </li><!-- End Contact Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-register.html">
           <i class="bi bi-card-list"></i>
           <span>Register</span>
         </a>
-      </li><!-- End Register Page Nav -->
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+         
+          <li>
+            <a href="tables-data.html" class="active">
+              <i class="bi bi-circle"></i><span>Data Tables</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Tables Nav -->
+      
+      <!-- End Register Page Nav -->
 
       <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="pages-login.html">
@@ -374,136 +368,77 @@
     </ul>
 
   </aside><!-- End Sidebar-->
+  
 
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Akun</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
-          <li class="breadcrumb-item active">Akun</li>
-        </ol>
-      </nav>
-    </div>
-    <section class="section dashboard">
-        <div class="row">
-  
-          <div class="col-lg-12">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Data Akun</h5>
-                <a href="tambah-akun.html"><button type="submit" class="btn btn-primary">+ Tambah Akun</button></a>
-                <div class="table-responsive">
-                  <table class="table table-bordered table-hover datatable">
-                    <thead>
-                      <tr>
-                        <th scope="col">Kode Akun</th>
-                        <th scope="col">Nama Akun</th>
-                        <th scope="col">Nama Akun (Inggris)</th>
-                        <th scope="col">Saldo Normal</th>
-                        <th scope="col">Aksi</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row" class="text-center">1000001</th>
-                        <td>Kas</td>
-                        <td>Cash on Hand</td>
-                        <td class="text-center">D</td>
-                        <td>
-                          <div class="btn-group" role="group">
-                            <a href="hapusdata.php" class="btn btn-danger">Hapus</a>
-                            <a href="updatedata.html" class="btn btn-warning">Update</a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-center">1000002</th>
-                        <td>Kas di Bank</td>
-                        <td>Bank Cash</td>
-                        <td class="text-center">D</td>
-                        <td>
-                          <div class="btn-group" role="group">
-                            <a href="hapusdata.php" class="btn btn-danger">Hapus</a>
-                            <a href="updatedata.html" class="btn btn-warning">Update</a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-center">1000003</th>
-                        <td>Investasi</td>
-                        <td>investment</td>
-                        <td class="text-center">D</td>
-                        <td>
-                          <div class="btn-group" role="group">
-                            <a href="hapusdata.php" class="btn btn-danger">Hapus</a>
-                            <a href="updatedata.html" class="btn btn-warning">Update</a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-center">100100</th>
-                        <td>Perlengkapan Habis Pakai</td>
-                        <td>Consumable Equipment</td>
-                        <td class="text-center">D</td>
-                        <td>
-                          <div class="btn-group" role="group">
-                            <a href="hapusdata.php" class="btn btn-danger">Hapus</a>
-                            <a href="updatedata.html" class="btn btn-warning">Update</a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-center">100500</th>
-                        <td>Peralatan Produksi</td>
-                        <td>Equipment</td>
-                        <td class="text-center">D</td>
-                        <td>
-                          <div class="btn-group" role="group">
-                            <a href="hapusdata.php" class="btn btn-danger">Hapus</a>
-                            <a href="updatedata.html" class="btn btn-warning">Update</a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-center">100510</th>
-                        <td>Akumulasi Depresiasi Peralatan Produksi</td>
-                        <td>Accumulated Depreciation of Equipment</td>
-                        <td class="text-center">K</td>
-                        <td>
-                          <div class="btn-group" role="group">
-                            <a href="hapusdata.php" class="btn btn-danger">Hapus</a>
-                            <a href="updatedata.html" class="btn btn-warning">Update</a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-center">100600</th>
-                        <td>Tanah</td>
-                        <td>Land</td>
-                        <td class="text-center">D</td>
-                        <td>
-                          <div class="btn-group" role="group">
-                            <a href="hapusdata.php" class="btn btn-danger">Hapus</a>
-                            <a href="updatedata.html" class="btn btn-warning">Update</a>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Data Table -->
-  
+      <h1>Daftar Saldo Awal</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item">Tables</li>
+        <li class="breadcrumb-item active">Data</li>
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Daftar Saldo Awal</h5>
+            <p>Per 1 Januari 2023</a>.</p>
+
+            <!-- Table with stripped rows -->
+            <table class="table datatable">
+              <thead>
+                <tr>
+                  <th>
+                    <b>I</b>d
+                  </th>
+                  <th>Kode</th>
+                  <th>Periode</th>
+                  <!-- <th data-type="date" data-format="YYYY/DD/MM">Start Date</th> -->
+                  <th>Nama Periode</th>
+                  <th>Saldo Normal</th>
+                  <th>Nominal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>9958</td>
+                  <td>periode</td>
+                  <td>nama-periode</td>
+                  <td>     D    </td>
+                  <td>15.000.000</td>
+                </tr>
+                
+              </tbody>
+            </table>
+            <!-- End Table with stripped rows -->
+
+          </div>
         </div>
-      </section>
+
+      </div>
+    </div>
+  </section>
+
+</main><!-- End #main -->
+
+
+   
       
 
 
   </main>
   <!-- End #main -->
+
+  
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
